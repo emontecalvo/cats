@@ -1,7 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/actions';
-
+import {parseString} from 'xml2js';
+import xmlToJson from './xmlToJson';
+import SliderMain from './sliderMain';
 
 class Home extends React.Component {
 
@@ -9,21 +11,33 @@ class Home extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.dispatch(actions.initialText());
+    this.props.dispatch(actions.initialFact());
+  }
+
+  buttonCombo() {
+    this.props.dispatch(actions.make_combo());
+  }
+
   render() { 
     if (this.props.showEdit2) {
-      return <div><NewEdit /></div>
+      return <div>editing</div>
     }
     else if (this.props.showFacts) {
       return (
           <div>
             <div>
               <h3>CAT FACTS</h3>
+              <button>order by short facts</button>
+              <button>new picture</button>
+              <div>
+                <SliderMain />
+              </div>
+            </div>
           </div>
-        )   
+        )
     } else {
-
-    }
-
     return (
       <div>
         <h3>CAT FACTS!</h3>
@@ -31,12 +45,16 @@ class Home extends React.Component {
         <button className="btn" onClick={ () => this.buttonCombo() }>Click me to see some cat factoids!</button>
       </div>
     )
+    }
+
   }
 
 }
 
 
-
 export default connect((state, props) => ({
-
+  picText: state.picText,
+  picFact: state.picFact,
+  picCombo: state.picCombo,
+  showFacts: state.showFacts,
 }))(Home);
