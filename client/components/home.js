@@ -4,6 +4,7 @@ import * as actions from '../actions/actions';
 import {parseString} from 'xml2js';
 import xmlToJson from './xmlToJson';
 import SliderMain from './sliderMain';
+import EditImages from './editImages';
 
 class Home extends React.Component {
 
@@ -21,8 +22,8 @@ class Home extends React.Component {
   }
 
   render() { 
-    if (this.props.showEdit2) {
-      return <div>editing</div>
+    if (this.props.showEdit) {
+      return <div><EditImages /></div>
     }
     else if (this.props.showFacts) {
       return (
@@ -57,4 +58,7 @@ export default connect((state, props) => ({
   picFact: state.picFact,
   picCombo: state.picCombo,
   showFacts: state.showFacts,
+  comboToEdit: state.comboToEdit,
+  comboToAdd: state.comboToAdd,
+  showEdit: state.showEdit
 }))(Home);

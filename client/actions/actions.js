@@ -29,3 +29,13 @@ export const make_combo = data => ({
 	type: 'MAKE_COMBO',
 	data
 })
+
+export const edit_pic_start = data => ({
+	type: 'EDIT_PIC_START',
+	data
+})
+
+export const edit_pic_facts = data => ({
+	type: 'EDIT_PIC_FACTS',
+	data
+})

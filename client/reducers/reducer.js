@@ -4,7 +4,10 @@ const initialState = {
 	picText: null,
 	picFact: null,
 	picCombo: [],
-	showFacts: false
+	showFacts: false,
+	comboToEdit: '',
+	comboToAdd: '',
+	showEdit: false
 }
 	
 const reducer = (state, action) => {
@@ -29,7 +32,25 @@ const reducer = (state, action) => {
 
 		return {...state, picCombo: sub, showFacts: true}
 	}
-	
+
+	if (action.type === 'EDIT_PIC_FACTS') {
+		let sub3 = []
+
+		for (let i = 0; i < state.picCombo.length; i++) {
+			if (action.data[1] != state.picCombo[i][1]) {
+				sub3.push(state.picCombo[i]);
+			} else {
+				sub3.push(action.data);
+			}
+		}
+		
+		return {...state, picCombo: sub3, showEdit: false}
+	}
+
+	if (action.type === 'EDIT_PIC_START') {
+		return {...state, picCombo: state.picCombo, showEdit: true, comboToEdit: action.data}
+	}
+
 	return state;
 
 }

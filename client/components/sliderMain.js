@@ -6,7 +6,9 @@ import Slider from 'react-image-slider';
 
 class sliderMain extends React.Component {
 
-
+  editPicStart(picPost) {
+    this.props.dispatch(actions.edit_pic_start(picPost));
+  }
 
 	render () {
   	return (
@@ -16,8 +18,8 @@ class sliderMain extends React.Component {
                                                               <div>
                                                                 <img src={picture[0].url} className="imgDisplay" />
                                                                 <p className="factDisplay">{picture[1]}</p>
-                                                                <button className="edit">edit</button>
-                                                                <button className="remove">remove</button>
+                                                                <button className="edit" onClick={() => this.editPicStart(picture)}>edit</button>
+                                                                <button>remove</button>
                                                               </div>
                                                         </div>)}
                </Slider>
@@ -33,4 +35,7 @@ export default connect((state, props) => ({
   picFact: state.picFact,
   picCombo: state.picCombo,
   showFacts: state.showFacts,
+  comboToEdit: state.comboToEdit,
+  comboToAdd: state.comboToAdd,
+  showEdit: state.showEdit
 }))(sliderMain);
