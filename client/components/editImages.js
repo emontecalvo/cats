@@ -27,7 +27,7 @@ class editImages extends React.Component {
 
             }}
           >
-        <div className="editBtn">
+        <div className="editArea">
           <img src={this.props.comboToEdit[0].url} className="imgDisplayEdit" />
           <br />
           <textarea rows="1" cols="50" name="text" defaultValue={this.props.comboToEdit[0].url}/>
