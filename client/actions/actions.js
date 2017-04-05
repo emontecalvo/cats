@@ -45,3 +45,8 @@ export const remove_pic_facts = data => ({
 	data
 })
 
+export const add_pic = data => ({
+	type: 'ADD_PIC',
+	data
+})
+

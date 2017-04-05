@@ -63,6 +63,19 @@ const reducer = (state, action) => {
 		return {...state, picCombo: sub2}
 	}
 
+	if (action.type === 'ADD_PIC') {
+		let newCombo = [];
+
+		for (let i = 0; i < state.picCombo.length; i++) {
+			newCombo.push(state.picCombo[i]);
+		}
+
+		let text = {url: action.data[0]}
+		let fact = action.data[1];
+		newCombo.unshift([text, fact]);
+		return {...state, picCombo: newCombo}
+	}
+
 	return state;
 
 }

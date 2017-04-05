@@ -5,6 +5,7 @@ import {parseString} from 'xml2js';
 import xmlToJson from './xmlToJson';
 import SliderMain from './sliderMain';
 import EditImages from './editImages';
+import NewPic from './newPic';
 
 class Home extends React.Component {
 
@@ -31,7 +32,7 @@ class Home extends React.Component {
             <div>
               <h3>CAT FACTS</h3>
               <button>order by short facts</button>
-              <button>new picture</button>
+              <NewPic />
               <div>
                 <SliderMain />
               </div>

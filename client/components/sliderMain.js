@@ -23,6 +23,7 @@ class sliderMain extends React.Component {
                                                                 <img src={picture[0].url} className="imgDisplay" />
                                                                 <p className="factDisplay">{picture[1]}</p>
                                                                 <button className="edit" onClick={() => this.editPicStart(picture)}>edit</button>
+                                                                <br />
                                                                 <button className="remove" onClick={() => this.removePic2Post(picture)}>remove</button>
                                                               </div>
                                                         </div>)}

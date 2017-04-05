@@ -30,6 +30,14 @@ body {
   text-align: center;
 }
 
+.edit {
+  margin-left: 50px;
+}
+
+.remove {
+  margin-left: 40px;
+}
+
 
 .carousel {
   text-align: center;
@@ -137,6 +145,14 @@ input {
   .rsc-arrow_right {
     margin-top: 0;
     background-size: 70%;
+  }
+
+  .edit {
+    margin-left: 30px;
+  }
+
+  .remove {
+    margin-left: 20px;
   }
 }
 
