@@ -29,12 +29,12 @@ class newPic extends React.Component {
               }}
             >
 
-        <textarea rows="1" cols="50" placeholder="image path / url" name="text" />
+        <textarea rows="1" cols="40" placeholder="image path / url" name="text" />
         <br />
-        <textarea rows="4" cols="50" placeholder="interesting fact" name="fact" />
+        <textarea rows="2" cols="40" placeholder="interesting fact" name="fact" />
         <br />
       <button type="submit">
-        post pic
+        add to carousel
       </button>
     </form>
     </div>

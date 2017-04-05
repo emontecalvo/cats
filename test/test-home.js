@@ -22,7 +22,7 @@ describe('Home component', () => {
 		console.log("button is", button);
 		console.log("result ", result.type.propTypes);
 
-		button.className.should.equal('btn')
+		button.className.should.equal('introBtn')
 		// result.type.should.equal('div')
 		
 		// button.type.should.equal('button')

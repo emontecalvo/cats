@@ -7,6 +7,7 @@ import SliderMain from './sliderMain';
 import EditImages from './editImages';
 import NewPic from './newPic';
 
+
 class Home extends React.Component {
 
   constructor(props) {
@@ -34,9 +35,16 @@ class Home extends React.Component {
       return (
           <div>
             <div>
-              <h3>CAT FACTS</h3>
-              <button onClick={ () => this.factSort() }>order by short facts</button>
-              <NewPic />
+              <div className="sidebox">
+                <div className="dropdown">
+                  <button>add pic</button>
+                  <ul className="dropdown-menu">
+                    <NewPic />
+                  </ul>
+                </div>
+                <button className="orderBtn" onClick={ () => this.factSort() }>order by short facts</button>
+              </div>
+                <h3>CAT FACTS</h3>
               <div>
                 <SliderMain />
               </div>
@@ -45,16 +53,15 @@ class Home extends React.Component {
         )
     } else {
     return (
-      <div>
-        <h3>CAT FACTS!</h3>
-
-        <button className="btn" onClick={ () => this.buttonCombo() }>Click me to see some cat factoids!</button>
+      <div className="intro">
+        <p>don't know anything about cats?</p>
+        <img src='https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e15/11055429_1400133086971029_511286067_n.jpg' className="dog"/>
+        <br />
+        <button className="introBtn" onClick={ () => this.buttonCombo() }>get cat facts!</button>
       </div>
     )
     }
-
   }
-
 }
 
 
