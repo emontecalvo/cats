@@ -76,6 +76,20 @@ const reducer = (state, action) => {
 		return {...state, picCombo: newCombo}
 	}
 
+	if (action.type === 'SORT_FACTS') {
+		let sortedFacts = [];
+
+		for (let i = 0; i < state.picCombo.length; i++) {
+			sortedFacts.push(state.picCombo[i]);
+		}
+
+		sortedFacts.sort(function(a, b) {
+			return a[1].length - b[1].length;
+		});
+
+		return {...state, picCombo: sortedFacts}
+	}
+
 	return state;
 
 }

@@ -22,6 +22,10 @@ class Home extends React.Component {
     this.props.dispatch(actions.make_combo());
   }
 
+  factSort() {
+    this.props.dispatch(actions.sort_facts());
+  }
+
   render() { 
     if (this.props.showEdit) {
       return <div><EditImages /></div>
@@ -31,7 +35,7 @@ class Home extends React.Component {
           <div>
             <div>
               <h3>CAT FACTS</h3>
-              <button>order by short facts</button>
+              <button onClick={ () => this.factSort() }>order by short facts</button>
               <NewPic />
               <div>
                 <SliderMain />

@@ -13,6 +13,17 @@ body {
   background-color: #B2EBF2;
 }
 
+.editBtn {
+  text-align: center;
+  margin-top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+
 .imgDisplay {
     position: relative;
     padding-top: 20px;
@@ -20,8 +31,16 @@ body {
     width:  200px;
     height: 200px;
     background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgDisplayEdit {
+    width:  200px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .factDisplay {

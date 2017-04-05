@@ -10,7 +10,6 @@ class editImages extends React.Component {
   }
 
   editPicPost(comboToEdit) {
-    console.log("I AM THE EDIT BUTTON");
     this.props.dispatch(actions.edit_pic_facts(comboToEdit));
   }
 
@@ -28,13 +27,17 @@ class editImages extends React.Component {
 
             }}
           >
-
-      <input type="text" name="text" defaultValue={this.props.comboToEdit[0].url}/>
-      <input type="text" name="fact" defaultValue={this.props.comboToEdit[1]}/>
-
-    <button type="submit">
-      save
-    </button>
+        <div className="editBtn">
+          <img src={this.props.comboToEdit[0].url} className="imgDisplayEdit" />
+          <br />
+          <textarea rows="1" cols="50" name="text" defaultValue={this.props.comboToEdit[0].url}/>
+          <br />
+          <textarea rows="4" cols="50" name="fact" defaultValue={this.props.comboToEdit[1]}/>
+          <br />
+          <button type="submit">
+            save
+          </button>
+        </div>
   </form>
       </div>
     )

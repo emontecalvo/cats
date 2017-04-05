@@ -29,9 +29,9 @@ class newPic extends React.Component {
               }}
             >
 
-        <input type="text" placeholder="image path / url" name="text" />
+        <textarea rows="1" cols="50" placeholder="image path / url" name="text" />
         <br />
-        <input type="text" placeholder="interesting fact" name="fact" />
+        <textarea rows="4" cols="50" placeholder="interesting fact" name="fact" />
         <br />
       <button type="submit">
         post pic

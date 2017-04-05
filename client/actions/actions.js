@@ -50,3 +50,8 @@ export const add_pic = data => ({
 	data
 })
 
+export const sort_facts = data => ({
+	type: 'SORT_FACTS',
+	data
+})
+
