@@ -51,6 +51,18 @@ const reducer = (state, action) => {
 		return {...state, picCombo: state.picCombo, showEdit: true, comboToEdit: action.data}
 	}
 
+	if (action.type === 'REMOVE_PIC_FACTS') {
+		let sub2 = []
+
+		for (let i = 0; i < state.picCombo.length; i++) {
+			if (action.data[1] != state.picCombo[i][1]) {
+				sub2.push(state.picCombo[i]);
+			}
+		}
+
+		return {...state, picCombo: sub2}
+	}
+
 	return state;
 
 }

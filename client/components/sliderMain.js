@@ -10,6 +10,10 @@ class sliderMain extends React.Component {
     this.props.dispatch(actions.edit_pic_start(picPost));
   }
 
+  removePic2Post(picPost) {
+    this.props.dispatch(actions.remove_pic_facts(picPost));
+  }
+
 	render () {
   	return (
     	<div>
@@ -19,7 +23,7 @@ class sliderMain extends React.Component {
                                                                 <img src={picture[0].url} className="imgDisplay" />
                                                                 <p className="factDisplay">{picture[1]}</p>
                                                                 <button className="edit" onClick={() => this.editPicStart(picture)}>edit</button>
-                                                                <button>remove</button>
+                                                                <button className="remove" onClick={() => this.removePic2Post(picture)}>remove</button>
                                                               </div>
                                                         </div>)}
                </Slider>

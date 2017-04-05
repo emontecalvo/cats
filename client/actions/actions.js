@@ -39,3 +39,9 @@ export const edit_pic_facts = data => ({
 	type: 'EDIT_PIC_FACTS',
 	data
 })
+
+export const remove_pic_facts = data => ({
+	type: 'REMOVE_PIC_FACTS',
+	data
+})
+
