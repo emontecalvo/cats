@@ -41,7 +41,6 @@
     "mongo": "^0.1.0",
     "mongodb": "^2.2.15",
     "mongoose": "^4.7.2",
-    "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
     "passport": "^0.3.2",
     "passport-google-oauth20": "^1.0.0",
@@ -55,7 +54,6 @@
     "react-router": "^3.0.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
-    "sass-loader": "^6.0.3",
     "webpack": "^2.0.0",
     "xml2js": "^0.4.17",
     "xml2json": "^0.11.0"
