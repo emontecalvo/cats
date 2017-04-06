@@ -27,6 +27,7 @@ h3 {
   text-align: center;
   font-size: 3em;
   color: #DCEED1;
+  margin: 5px;
 }
 
 .orderBtn {
@@ -55,6 +56,15 @@ button {
   color: #DCEED1;
   font-size: 14px;
   margin: 5px;
+}
+
+button:hover {
+  background-color: #AAC0AA; 
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: #736372;
+  outline-offset: 5px;
+  text-shadow: 1px 1px 2px #427388; 
 }
 
 input {

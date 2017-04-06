@@ -41,7 +41,6 @@ class newPic extends React.Component {
       </div>
     )
   }
-
 }
 
 

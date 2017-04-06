@@ -52,14 +52,14 @@ class Home extends React.Component {
           </div>
         )
     } else {
-    return (
-      <div className="intro">
-        <p>don't know anything about cats?</p>
-        <img src='https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e15/11055429_1400133086971029_511286067_n.jpg' className="dog"/>
-        <br />
-        <button className="introBtn" onClick={ () => this.buttonCombo() }>get cat facts!</button>
-      </div>
-    )
+        return (
+          <div className="intro">
+            <p>don't know anything about cats?</p>
+            <img src='https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e15/11055429_1400133086971029_511286067_n.jpg' className="dog"/>
+            <br />
+            <button className="introBtn" onClick={ () => this.buttonCombo() }>get cat facts!</button>
+          </div>
+        )
     }
   }
 }

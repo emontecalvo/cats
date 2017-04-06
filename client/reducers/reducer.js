@@ -91,7 +91,6 @@ const reducer = (state, action) => {
 	}
 
 	return state;
-
 }
 
 exports.reducer = reducer;
