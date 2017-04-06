@@ -3,9 +3,14 @@
 
 ![Alt text](./cat.png?raw=true "CatFacts")
 
+
+### LIVE SITE:
+* https://emontecalvo.github.io/cats
+
+
 ### Setup Instructions:
 
-* To use this application, simply clone or download the repository.
+* To use this application on your local machine, simply clone or download the repository.
 
 * Make sure you have Node.js installed (https://nodejs.org/en/).
 
