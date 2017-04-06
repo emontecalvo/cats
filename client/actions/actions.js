@@ -11,7 +11,7 @@ const update_fact = data => ({
 })
 
 export const initialText = () => dispatch => {
-	 return fetch(`http://mapd-cats.azurewebsites.net/catpics`)
+	 return fetch(`https://mapd-cats.azurewebsites.net/catpics`)
     	.then(res => res.text())
       .then(res => (new window.DOMParser()).parseFromString(res, "text/xml"))
       .then((data) => { dispatch(update_text(data))})
@@ -19,7 +19,7 @@ export const initialText = () => dispatch => {
 }
 
 export const initialFact = () => dispatch => {
-	  return fetch('http://mapd-cats.azurewebsites.net/catfacts')
+	  return fetch('https://mapd-cats.azurewebsites.net/catfacts')
       .then(res => res.json())
       .then((res) => {dispatch(update_fact(res.facts))})
       .catch(err => console.log(err))
