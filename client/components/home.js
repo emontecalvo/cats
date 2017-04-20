@@ -34,10 +34,10 @@ class Home extends React.Component {
     else if (this.props.showFacts) {
       return (
           <div>
-            <div>
+            <div className="carousel">
               <div className="sidebox">
                 <div className="dropdown">
-                  <button>add pic</button>
+                  <button className="addBtn">add pic</button>
                   <ul className="dropdown-menu">
                     <NewPic />
                   </ul>
