@@ -1,7 +1,7 @@
 module.exports = {
 	entry: "./client/index.js",
 	output: {
-		path: "./build",
+		path: __dirname + "/build",
 		filename: "app.js"
 	},
 	devtool: 'inline-source-map',
